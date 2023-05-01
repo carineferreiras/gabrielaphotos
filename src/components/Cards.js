@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
-import Images from './images';
+// import Images from './images';
 
 function Cards() {
     return (
@@ -66,7 +66,7 @@ function Cards() {
                             path='/services'
                         />
                         <CardItem
-                            style={{ backgroundImage: `url(${image})` }}
+                         
                             text='Tratamentos Faciais'
                             label='Luxury'
                             path='/services'
