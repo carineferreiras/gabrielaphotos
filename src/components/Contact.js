@@ -12,7 +12,7 @@ function Contact() {
         style={{ backgroundImage: `url(${DSC_0091.jpg})` }}
       ></div>
       <div className="rightSide">
-        <h1> Contact Us</h1>
+        <h1> Contact Me</h1>
 
         <form id="contact-form" method="POST">
           <label htmlFor="name">Full Name</label>
