@@ -6,7 +6,7 @@ import {
   FaInstagram,
   FaLinkedin
 } from 'react-icons/fa';
-
+import Logo from "../Footer.js/fidelleslogo2.svg";
 
 
 
@@ -33,9 +33,7 @@ function Footer() {
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
-            <Link to='/' className='social-logo'>
-              FIDE||ES
-            </Link>
+          <img src={Logo} alt="logo"/>
           </div>
           <small className='website-rights'>BUILT BY HOD © 2023</small>
           <div className='social-icons'>

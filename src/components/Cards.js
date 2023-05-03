@@ -1,7 +1,21 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
-// import Images from './images';
+ import Logo from '../components/images/DSC_0010.jpg';
+ import Logo2 from '../components/images/DSC_0014.jpg';
+ import Logo3 from '../components/images/DSC_0023.jpg' ;
+ import Logo4 from '../components/images/DSC_0028.jpg';
+ import Logo5 from '../components/images/DSC_0091.jpg';
+ import Logo6 from '../components/images/DSC_0105.jpg';
+ import Logo7 from '../components/images/DSC_0153.jpg';
+ import Logo8 from '../components/images/DSC_0154.jpg';
+ import Logo9 from '../components/images/DSC_0605.jpg';
+ import Logo10 from '../components/images/DSC_0606.jpg';
+ import Logo11 from '../components/images/DSC_0612.jpg';
+ import Logo12 from '../components/images/DSC_0613.jpg';
+
+
+
 
 function Cards() {
     return (
@@ -11,19 +25,16 @@ function Cards() {
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
                         <CardItem
-                            src='DSC_0010.jpg'
-                            text='photo '
-                            
-                            path='/services'
+                           src={Logo} 
                         />
                         <CardItem
-                            src='/images/DSC_0014.jpg'
+                            src={Logo2} 
                             text='photo'
                             
                             path='/services'
                         />
                         <CardItem
-                            src='images/img-1.jpg'
+                            src={Logo3} 
                             text='photo'
                         
                             path='/services'
@@ -31,18 +42,18 @@ function Cards() {
                     </ul>
                     <ul className='cards__items'>
                         <CardItem
-                            src='images/img-1.jpg'
+                           src={Logo4} 
                             text='photo'
                             path='/services'
                         />
                         <CardItem
-                            src='images/img-1.jpg'
+                            src={Logo5} 
                             text='photo'
                             
                             path='/services'
                         />
                         <CardItem
-                            src='images/img-1.jpg'
+                            src={Logo6} 
                             text='photo'
                             
                             path='/sign-up'
@@ -54,19 +65,19 @@ function Cards() {
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
                         <CardItem
-                            src='images/img-1.jpg'
+                            src={Logo7} 
                             text='Tratamentos Corporais'
                             label='Adventure'
                             path='/services'
                         />
                         <CardItem
-                            src='images/img-1.jpg'
+                            src={Logo8} 
                             text='Tratamentos Faciais'
                             label='Luxury'
                             path='/services'
                         />
                         <CardItem
-                         
+                         src={Logo9} 
                             text='Tratamentos Faciais'
                             label='Luxury'
                             path='/services'
@@ -74,19 +85,19 @@ function Cards() {
                     </ul>
                     <ul className='cards__items'>
                         <CardItem
-                            src='images/img-1.jpg'
+                            src={Logo10} 
                             text='Vacinação'
                             label='Mystery'
                             path='/services'
                         />
                         <CardItem
-                            src='images/img-1.jpg'
+                            src={Logo11} 
                             text='Colocação de brincos em bebês'
                             label='Adventure'
                             path='/services'
                         />
                         <CardItem
-                            src='images/img-1.jpg'
+                            src={Logo12} 
                             text='Medicina Integrativa'
                             label='Adrenaline'
                             path='/sign-up'

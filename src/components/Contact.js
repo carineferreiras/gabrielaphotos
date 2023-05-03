@@ -1,16 +1,15 @@
 import React from 'react';
 import '../App.css';
-
 import "./Contact.css";
-import DSC_0091 from "./images/DSC_0091.jpg";
+import Logo from "../components/images/contactme7.png";
 
 function Contact() {
   return (
     <div className="contact">
       <div
-        className="leftSide"
-        style={{ backgroundImage: `url(${DSC_0091.jpg})` }}
-      ></div>
+        className="leftSide">
+        <img id="logoimg" src={Logo} alt="logo"/>
+      </div>
       <div className="rightSide">
         <h1> Contact Me</h1>
 

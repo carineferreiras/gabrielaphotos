@@ -6,7 +6,7 @@ import './Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 // import image from '../images/svg-1.png';
-
+import Logo from "../components/images/fidelleslogo4.svg"
 
 
 function Navbar() {
@@ -39,11 +39,10 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
         <nav className='navbar'>
           <div className='navbar-container container'>
-            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              {/* <MdFingerprint className='navbar-icon' /> */}
-              {/* <img src={image} alt=' '/> */}
-             FIDE||ES
-            </Link>
+           <div className='navbar-logo' onClick={closeMobileMenu}>
+              <img src={Logo} alt="logo"/>
+             {/* FIDE||ES */}
+            </div>
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>

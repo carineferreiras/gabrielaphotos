@@ -6,8 +6,9 @@ import Pricing from '../../Pricing';
 function Services() {
   return (
     <>
+    <Cards/>
       <Pricing />
-      <Cards/>
+      
   
     </>
   );

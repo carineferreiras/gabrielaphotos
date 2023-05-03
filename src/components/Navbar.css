@@ -22,19 +22,25 @@
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 400px;
+    padding-left: 400px;
   }
   
   .navbar-logo {
-    color: #fff;
-    justify-self: start;
+    justify-self:center;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
+   width: 100%;
+    max-width: 1300px;
+   
+   
+    /* margin-right: 1550px; */
+   
+    justify-content: center;
+  
     display: flex;
-    align-items: center;
-    /* background-image: url('/images/svg-2.svg') center center/cover no-repeat; */
+   
+   
+    
   }
   
   .navbar-icon {
