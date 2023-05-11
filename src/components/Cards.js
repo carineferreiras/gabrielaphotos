@@ -9,7 +9,7 @@ import CardItem from './CardItem';
 
 function Cards() {
 
-    const [image, setImage] = useState(null);
+    const [images, setImages] = useState(null);
     
     
     useEffect(() => {
@@ -20,11 +20,11 @@ function Cards() {
         }
       };
   
-      fetch("https://api.pexels.com/v1/search?query=nature&per_page=1", options)
+      fetch("https://api.pexels.com/v1/search?query=nature&per_page=6", options)
         .then(response => response.json())
         .then(data => {
           if (data.photos && data.photos.length > 0) {
-            setImage(data.photos[0].src.large);
+            setImages(data.photos);
           }
         });
     }, []);
@@ -43,30 +43,25 @@ function Cards() {
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     {/* <ul className='cards__items'> */}
-                    {image && (
-            <CardItem
-              src={image}
-              text='Delicious food'
-              label='Food'
-              path='/services'
-            />
-          )}
-           {image && (
-            <CardItem
-              src={image}
-              text='Delicious food'
-              label='Food'
-              path='/services'
-            />
-          )}
-           {image && (
-            <CardItem
-              src={image}
-              text='Delicious food'
-              label='Food'
-              path='/services'
-            />
-          )}
+                   {images && images.length  >  0 ?
+                    images.map ((image)=> {
+                        return < CardItem
+                        src={image.src.large}
+                        text='Delicious food'
+                        label='Food'
+                        path='/services'
+                      />
+                    })
+                    : null }
+
+            {/* // <CardItem
+            //   src={images}
+            //   text='Delicious food'
+            //   label='Food'
+            //   path='/services'
+            // /> 
+          
+           
                         {/* <CardItem
                             src={image}
                             text='Tratamentos Corporais'
