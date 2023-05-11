@@ -42,17 +42,18 @@ function Cards() {
             </div>
             <div className='cards__container'>
                 <div className='cards__wrapper'>
-                    {/* <ul className='cards__items'> */}
+                     <ul className='cards__items'> 
                    {images && images.length  >  0 ?
                     images.map ((image)=> {
                         return < CardItem
                         src={image.src.large}
-                        text='Delicious food'
-                        label='Food'
+                        text='Photoshoot'
+                        // label='Photos'
                         path='/services'
                       />
                     })
                     : null }
+                    </ul> 
 
             {/* // <CardItem
             //   src={images}
