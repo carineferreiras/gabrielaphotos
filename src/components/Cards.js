@@ -51,6 +51,22 @@ function Cards() {
               path='/services'
             />
           )}
+           {image && (
+            <CardItem
+              src={image}
+              text='Delicious food'
+              label='Food'
+              path='/services'
+            />
+          )}
+           {image && (
+            <CardItem
+              src={image}
+              text='Delicious food'
+              label='Food'
+              path='/services'
+            />
+          )}
                         {/* <CardItem
                             src={image}
                             text='Tratamentos Corporais'

@@ -1,7 +1,5 @@
-
 import '../App.css';
 import "./Contact.css";
-
 import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
 
