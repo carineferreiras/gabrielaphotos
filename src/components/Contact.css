@@ -1,16 +1,16 @@
 .contact {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
   }
   
   .contact .leftSide {
     height: 100%;
     flex: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: justify;
     background-size:auto;
-    background-position:behind; 
+    background-image: url('./images/contactme2.png') ;
+    
   }
  
   

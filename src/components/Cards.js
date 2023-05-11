@@ -1,83 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
- import Logo from '../components/images/DSC_0010.jpg';
- import Logo2 from '../components/images/DSC_0014.jpg';
- import Logo3 from '../components/images/DSC_0023.jpg' ;
- import Logo4 from '../components/images/DSC_0028.jpg';
- import Logo5 from '../components/images/DSC_0091.jpg';
- import Logo6 from '../components/images/DSC_0105.jpg';
- import Logo7 from '../components/images/DSC_0153.jpg';
- import Logo8 from '../components/images/DSC_0154.jpg';
- import Logo9 from '../components/images/DSC_0605.jpg';
- import Logo10 from '../components/images/DSC_0606.jpg';
- import Logo11 from '../components/images/DSC_0612.jpg';
- import Logo12 from '../components/images/DSC_0613.jpg';
+//  import Logo from '../components/images/DSC_0010.jpg';
+
 
 
 
 
 function Cards() {
+
+    const [image, setImage] = useState(null);
+    
+    
+    useEffect(() => {
+      const options = {
+        method: 'GET',
+        headers: {
+          Authorization: 'NzHpSxfkoPxlz3VIeOCf2SnbyLdpf4NWk1bbS7fcKCs8KMLVqXQ4ENXs'
+        }
+      };
+  
+      fetch("https://api.pexels.com/v1/search?query=nature&per_page=1", options)
+        .then(response => response.json())
+        .then(data => {
+          if (data.photos && data.photos.length > 0) {
+            setImage(data.photos[0].src.large);
+          }
+        });
+    }, []);
+
+
+
+
     return (
         <div className='cards'>
             <h1>GALLERY</h1>
             <div className='cards__container'>
                 <div className='cards__wrapper'>
-                    <ul className='cards__items'>
-                        <CardItem
-                           src={Logo} 
-                        />
-                        <CardItem
-                            src={Logo2} 
-                            text='photo'
-                            
-                            path='/services'
-                        />
-                        <CardItem
-                            src={Logo3} 
-                            text='photo'
-                        
-                            path='/services'
-                        />
-                    </ul>
-                    <ul className='cards__items'>
-                        <CardItem
-                           src={Logo4} 
-                            text='photo'
-                            path='/services'
-                        />
-                        <CardItem
-                            src={Logo5} 
-                            text='photo'
-                            
-                            path='/services'
-                        />
-                        <CardItem
-                            src={Logo6} 
-                            text='photo'
-                            
-                            path='/sign-up'
-                        />
-                    </ul>
+                    {/*     */}
                 </div>
             </div>
             <div className='cards__container'>
                 <div className='cards__wrapper'>
-                    <ul className='cards__items'>
-                        <CardItem
-                            src={Logo7} 
+                    {/* <ul className='cards__items'> */}
+                    {image && (
+            <CardItem
+              src={image}
+              text='Delicious food'
+              label='Food'
+              path='/services'
+            />
+          )}
+                        {/* <CardItem
+                            src={image}
                             text='Tratamentos Corporais'
                             label='Adventure'
                             path='/services'
-                        />
-                        <CardItem
-                            src={Logo8} 
+                        /> */}
+                        {/* <CardItem
+                            src={image}
                             text='Tratamentos Faciais'
                             label='Luxury'
                             path='/services'
                         />
                         <CardItem
-                         src={Logo9} 
+                         src={image}
                             text='Tratamentos Faciais'
                             label='Luxury'
                             path='/services'
@@ -85,24 +72,24 @@ function Cards() {
                     </ul>
                     <ul className='cards__items'>
                         <CardItem
-                            src={Logo10} 
+                            src={image}
                             text='Vacinação'
                             label='Mystery'
                             path='/services'
                         />
                         <CardItem
-                            src={Logo11} 
+                            src={image}
                             text='Colocação de brincos em bebês'
                             label='Adventure'
                             path='/services'
                         />
                         <CardItem
-                            src={Logo12} 
+                            src={image}
                             text='Medicina Integrativa'
                             label='Adrenaline'
                             path='/sign-up'
-                        />
-                    </ul>
+                        /> */}
+                    {/* </ul> */}
                 </div>
             </div>
         </div>
